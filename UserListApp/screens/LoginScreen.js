@@ -11,13 +11,11 @@ export default function LoginScreen({ navigation }) {
     checkBiometricSupport();
   }, []);
 
-  // Verifica se o dispositivo suporta biometria
   const checkBiometricSupport = async () => {
     const compatible = await LocalAuthentication.hasHardwareAsync();
     setHasBiometricSupport(compatible);
   };
 
-  // Função para autenticação biométrica
   const handleBiometricLogin = async () => {
     try {
       const result = await LocalAuthentication.authenticateAsync({
@@ -27,7 +25,7 @@ export default function LoginScreen({ navigation }) {
 
       if (result.success) {
         Alert.alert("Autenticação bem-sucedida!");
-        navigation.replace("Home"); // Navegar para a tela de lista de usuários
+        navigation.replace("Home"); 
       } else {
         Alert.alert("Falha na autenticação!");
       }
@@ -37,11 +35,10 @@ export default function LoginScreen({ navigation }) {
     }
   };
 
-  // Função para autenticação tradicional (Login e Senha)
   const handleTraditionalLogin = () => {
     if (username === "usuario" && password === "senha") {
       Alert.alert("Login bem-sucedido!");
-      navigation.replace("Home"); // Navegar para a tela de lista de usuários
+      navigation.replace("Home"); 
     } else {
       Alert.alert("Usuário ou senha incorretos.");
     }
@@ -51,7 +48,6 @@ export default function LoginScreen({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.title}>Tela de Login</Text>
 
-      {/* Opção de login tradicional */}
       <TextInput
         style={styles.input}
         placeholder="Usuário"
@@ -71,7 +67,6 @@ export default function LoginScreen({ navigation }) {
         <Text style={styles.orText}>OU</Text>
       </View>
 
-      {/* Opção de login biométrico */}
       {hasBiometricSupport ? (
         <Button title="Login com Digital" onPress={handleBiometricLogin} />
       ) : (

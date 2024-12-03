@@ -17,7 +17,6 @@ export default function DetailsScreen({ route, navigation }) {
       </Text>
       <Text style={styles.detail}>Nacionalidade: {user.nat}</Text>
 
-      {/* Botão Voltar na parte inferior da tela */}
       <View style={styles.buttonContainer}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Text style={styles.switchAccountText}>👤 Voltar</Text>
@@ -31,7 +30,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "flex-start", // Alinha o conteúdo ao topo
+    justifyContent: "flex-start", 
     padding: 20,
     backgroundColor: "#f8f9fa",
   },
@@ -51,16 +50,16 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   buttonContainer: {
-    position: "absolute", // Faz com que o botão fique fixado na parte inferior
-    bottom: 20, // Distância do fundo da tela
+    position: "absolute", 
+    bottom: 20, 
     left: 0,
     right: 0,
-    alignItems: "center", // Centraliza o botão horizontalmente
+    alignItems: "center", 
   },
   switchAccountText: {
-    fontSize: 24, // Aumenta o tamanho do texto
-    fontWeight: "bold", // Torna o texto mais destacado
-    color: "black", // Cor do texto alterada para preto
-    textAlign: "center", // Centraliza o texto
+    fontSize: 24, 
+    fontWeight: "bold", 
+    color: "black", 
+    textAlign: "center", 
   },
 });

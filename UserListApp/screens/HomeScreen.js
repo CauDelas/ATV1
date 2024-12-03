@@ -111,14 +111,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonContainer: {
-    justifyContent: "center", // Certifica que o conteúdo é centralizado verticalmente
-    alignItems: "center", // Centraliza horizontalmente
-    marginTop: 20, // Adiciona um pequeno espaço entre o conteúdo e o botão
+    justifyContent: "center", 
+    alignItems: "center", 
+    marginTop: 20, 
   },
   switchAccountText: {
-    fontSize: 20, // Aumenta o tamanho do texto
-    fontWeight: "bold", // Torna o texto mais destacado
-    color: "black", // Cor do texto
-    textAlign: "center", // Centraliza o texto
+    fontSize: 20, 
+    fontWeight: "bold", 
+    color: "black", 
+    textAlign: "center", 
   },
 });
